@@ -11,9 +11,11 @@ body {
   font-family: "akhbar", sans-serif;
   font-weight: 400;
   font-style: normal;
-  cursor: url('imgs/cursor.png'), auto;
+  cursor: url('imgs/cursor3.png'); 
 }
-
+html, body {
+  cursor: url('imgs/cursor3.png'); 
+}
 ::selection {
   background: #000000;
   color: #ffffff;
@@ -130,7 +132,6 @@ header {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 0.3px;
-  cursor: url('imgs/cursor.png'), auto;
 }
 
 .item:hover .content {
@@ -138,18 +139,19 @@ header {
 }
 
 /* ---------------------- CURSOR ---------------------- */
+/*
 .cursor-dot {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;  /* Adjust the width and height as per your image size */
+  width: 20px; 
   height: 20px;
   pointer-events: none;
   transition: transform 0.1s ease;
   z-index: 9999;
-  background-image: url('imgs/cursor.png');  /* Set your cursor image */
-  background-size: cover; /* Ensure the image fits the size */
-}
+  background-image: url('imgs/cursor2.png');  
+  background-size: cover; 
+}*/
 
 /* ---------------------- FOOTER ---------------------- */
 footer {
