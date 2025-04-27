@@ -19,7 +19,7 @@ function animate() {
   bobbleY += (Math.random() - 0.5) * 5; // Random bobble Y direction
 
   // Update dot position with bobble effect
-  dot.style.transform = `translate(${dotX + bobbleX}px, ${dotY + bobbleY}px)`;
+  dot.style.transform = `translate(${dotX}px, ${dotY}px)`;
 
   requestAnimationFrame(animate);
 }
