@@ -14,6 +14,7 @@ body {
   cursor: url('imgs/cursor.png'), auto;
 }
 
+/* ---------------------- HEADER ---------------------- */
 header {
   position: relative; 
   display: flex;
@@ -41,6 +42,7 @@ header {
   margin-block: 0;
 }
 
+/* ---------------------- MENU ---------------------- */
 .index {
   margin: 0;
   padding: 0;
@@ -74,6 +76,7 @@ header {
   flex-direction: column;
 }
 
+/* ---------------------- MAIN CONTENT ---------------------- */
 .items {
   position: relative;
   width: 100%;
@@ -86,14 +89,13 @@ header {
 
 .content {
   position: absolute;
-  right: 100%; /* Position content to the left of title */
+  right: 100%;
   top: 0;
   display: none;
   padding: 8px;
-  background: white;
-  border: 1px solid #ccc;
-  min-width: 150px;
   z-index: 10;
+  width: auto; 
+  line-height: 1;
 }
 
 .item:hover {
@@ -107,6 +109,7 @@ header {
   display: block;
 }
 
+/* ---------------------- CURSOR ---------------------- */
 .cursor-dot {
   position: fixed;
   top: 0;
@@ -121,6 +124,7 @@ header {
   background-size: cover; /* Ensure the image fits the size */
 }
 
+/* ---------------------- FOOTER ---------------------- */
 footer {
   margin: 0px;
   padding: 0px;
