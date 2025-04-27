@@ -23,10 +23,24 @@ window.onload = function() {
   const bodyWidth = window.innerWidth;
   const bodyHeight = window.innerHeight;
 
+  // area w scattered items defined
+  const centerX = bodyWidth / 2;
+  const centerY = bodyHeight / 2;
+  const maxDistance = 200; // max distance from center for scattering 
+
   items.forEach(item => {
-    const randomX = Math.random() * (bodyWidth - item.offsetWidth);
-    const randomY = Math.random() * (bodyHeight - item.offsetHeight);
-    item.style.left = `${randomX}px`;
-    item.style.top = `${randomY}px`;
+    const itemWidth = item.offsetWidth;
+    const itemHeight = item.offsetHeight;
+    // random positions around center
+    const randomX = centerX + (Math.random() * maxDistance * 2 - maxDistance) - (itemWidth / 2);
+    const randomY = centerY + (Math.random() * maxDistance * 2 - maxDistance) - (itemHeight / 2);
+    // within the viewport range
+    const finalX = Math.max(0, Math.min(bodyWidth - itemWidth, randomX));
+    const finalY = Math.max(0, Math.min(bodyHeight - itemHeight, randomY));
+    // applied
+    item.style.position = 'absolute';
+    item.style.left = `${finalX}px`;
+    item.style.top = `${finalY}px`;
   });
 };
+
