@@ -2,6 +2,8 @@
 const dot = document.querySelector('.cursor-dot');
 let mouseX = 0, mouseY = 0;
 let dotX = 0, dotY = 0;
+let bobbleX = 0, bobbleY = 0;
+let bobbleSpeed = 0.1; // Speed of bobbling effect
 
 window.addEventListener('mousemove', (e) => {
   mouseX = e.clientX;
@@ -9,14 +11,22 @@ window.addEventListener('mousemove', (e) => {
 });
 
 function animate() {
-  dotX += (mouseX - dotX) * 0.1;
+  dotX += (mouseX - dotX) * 0.1; // Smooth cursor movement
   dotY += (mouseY - dotY) * 0.1;
-  dot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+
+  // Add a random offset to create bobble effect around the cursor
+  bobbleX += (Math.random() - 0.5) * 5; // Random bobble X direction
+  bobbleY += (Math.random() - 0.5) * 5; // Random bobble Y direction
+
+  // Update dot position with bobble effect
+  dot.style.transform = `translate(${dotX + bobbleX}px, ${dotY + bobbleY}px)`;
+
   requestAnimationFrame(animate);
 }
 
 animate();
 
+/*
 // ------------------------------ random item pos ----------------------------
 window.onload = function() {
   const items = document.querySelectorAll('.item');
@@ -44,3 +54,4 @@ window.onload = function() {
   });
 };
 
+*/

@@ -11,6 +11,7 @@ body {
   font-family: "akhbar", sans-serif;
   font-weight: 400;
   font-style: normal;
+  cursor: url('imgs/cursor.png'), auto;
 }
 
 header {
@@ -40,6 +41,39 @@ header {
   margin-block: 0;
 }
 
+.index {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  left: 20px; 
+  width: auto;  
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center;
+}
+
+.index .dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 100%; /* Position below the index */
+  left: 20px;
+  width: 20vw; 
+}
+
+.index:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 0.3px;
+}
+
+.index:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .items {
   position: relative;
   width: 100%;
@@ -50,26 +84,41 @@ header {
   position: absolute;
 }
 
-.items .item:hover {
+.content {
+  position: absolute;
+  right: 100%; /* Position content to the left of title */
+  top: 0;
+  display: none;
+  padding: 8px;
+  background: white;
+  border: 1px solid #ccc;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.item:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 0.3px;
   cursor: url('imgs/cursor.png'), auto;
 }
 
-/* Cursor Dot */
+.item:hover .content {
+  display: block;
+}
+
 .cursor-dot {
   position: fixed;
   top: 0;
   left: 0;
-  width: 10px;
-  height: 10px;
-  background: #212121;
-  border-radius: 50%;
+  width: 20px;  /* Adjust the width and height as per your image size */
+  height: 20px;
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease;
   z-index: 9999;
+  background-image: url('imgs/cursor.png');  /* Set your cursor image */
+  background-size: cover; /* Ensure the image fits the size */
 }
 
 footer {
