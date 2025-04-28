@@ -82,3 +82,64 @@ window.onload = function() {
   });
 };
 */
+
+// ------------------------------ typing effect ---------------------------- //
+// ------------------------------ typing effect ---------------------------- //
+const textElement = document.querySelector('.handwriting-effect');
+
+const initialText = "Hey, it's ";
+const firstName = "Julia";
+const lastName = "Zdzilowska";
+
+let fullText = initialText + firstName;
+let currentText = "";
+let index = 0;
+let isDeleting = false;
+let isFinished = false;
+
+function type() {
+  if (isFinished) return; // STOP everything once finished
+
+  if (!isDeleting) {
+    currentText = fullText.substring(0, index);
+    textElement.textContent = currentText;
+    index++;
+
+    if (index > fullText.length) {
+      if (fullText === initialText + lastName) {
+        // If we just finished typing the surname, stop
+        setTimeout(() => {
+          isFinished = true;
+          textElement.style.borderRight = "none"; // Remove caret
+        }, 2000);
+        return;
+      } else {
+        // Finished typing "hey, it's julia" - prepare to delete
+        setTimeout(() => {
+          isDeleting = true;
+          index = fullText.length;
+          type();
+        }, 1000);
+        return;
+      }
+    }
+  } else {
+    currentText = fullText.substring(0, index);
+    textElement.textContent = currentText;
+    index--;
+
+    if (index === initialText.length) {
+      // Finished deleting "julia", now type "zdzilowska"
+      isDeleting = false;
+      fullText = initialText + lastName;
+      index = initialText.length;
+      setTimeout(type, 600);
+    }
+  }
+
+  setTimeout(type, isDeleting ? 100 : 150);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(type, 500);
+});
