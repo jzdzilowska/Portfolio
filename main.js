@@ -1,4 +1,4 @@
-// --------------------------------- cursor ----------------------------------
+// ----------------------------- cursor ----------------------------- //
 const dot = document.querySelector('.cursor-dot');
 let mouseX = 0, mouseY = 0;
 let dotX = 0, dotY = 0;
@@ -26,6 +26,34 @@ function animate() {
 
 animate();
 
+// ------------------------ delayed hover ------------------------- //
+const items = document.querySelectorAll('.item');
+items.forEach(item => {
+  let timeout;
+  item.addEventListener('mouseenter', () => {
+    // Show content immediately
+    const content = item.querySelector('.content');
+    const img = item.querySelector('.content img');
+    
+    content.style.opacity = '1';
+    img.style.opacity = '1'; // Show image immediately
+    content.style.transition = 'opacity 0.5s ease';
+    img.style.transition = 'opacity 0.5s ease';
+  });
+
+  item.addEventListener('mouseleave', () => {
+    // Delay hiding the content and image
+    timeout = setTimeout(() => {
+      const content = item.querySelector('.content');
+      const img = item.querySelector('.content img');
+      
+      content.style.opacity = '0';
+      img.style.opacity = '0'; // Hide image after delay
+      content.style.transition = 'opacity 0.5s ease';
+      img.style.transition = 'opacity 0.5s ease';
+    }, 1000); // Adjust delay in milliseconds (1 second here)
+  });
+});
 /*
 // ------------------------------ random item pos ----------------------------
 window.onload = function() {
