@@ -50,10 +50,6 @@ header {
   margin-top: 20px;
 }
 
-.logo {
-  height: 90px;
-}
-
 .occupation {
   margin: 0;
   padding: 0;
@@ -183,23 +179,23 @@ footer {
   }
 }
 
-.handwriting-effect {
-  font-family: 'Custom';
-  font-s
-  font-size: 3rem;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  border-right: 4px solid black;
-  animation: handwriting 4s steps(16) 1s forwards, blink-caret 0.75s step-end infinite; /* break into 16 steps */
-}
-
 @keyframes blink-caret {
   50% {
     border-color: transparent;
   }
 }
 
+.handwriting-effect {
+  font-family: 'Custom';
+  letter-spacing: -4px;
+  font-size: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 3px solid black;
+  animation: handwriting 1s steps(16) 1s forwards, blink-caret 0.75s step-end infinite; /* break into 16 steps */
+  animation-fill-mode: forwards;
+}
 /*
 font-family: "shabby-chic", sans-serif;
 font-weight: 400;
