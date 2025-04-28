@@ -6,16 +6,15 @@ body {
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  background-color: #f0f0f0;
-  color: #212121;
+  align-items: center;
+  background-color:rgb(240, 240, 240);
+  color: rgb(33, 33, 33)#000000;
   font-family: "akhbar", sans-serif;
   font-weight: 400;
   font-style: normal;
-  cursor: url('imgs/cursor3.png'); 
+  cursor: url('./imgs/cross_cursor.png'), auto; 
 }
-html, body {
-  cursor: url('imgs/cursor3.png'); 
-}
+
 ::selection {
   background: #000000;
   color: #ffffff;
@@ -32,6 +31,7 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 0.3px;
+  /* cursor: url('./imgs/cross_cur.png'), auto; */
 }
 
 /* ---------------------- HEADER ---------------------- */
@@ -40,7 +40,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
   margin-top: 20px;
 }
 
@@ -98,12 +98,11 @@ header {
 
 /* ---------------------- MAIN CONTENT ---------------------- */
 .items {
-  position: relative;
   height: 100%;
 }
 
 .item {
-  position: absolute;
+  position: fixed;
 }
 
 .title {
@@ -114,7 +113,6 @@ header {
   position: absolute;
   right: 20%;
   top: 30%;
-  display: none;
   padding: 10px;
   z-index: 10;
   line-height: 1;
@@ -122,13 +120,19 @@ header {
   text-transform: uppercase; 
   text-align: justify;
   text-justify: inter-word;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .content img {
   height: 20%; 
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .item:hover {
+  /* cursor: url('./imgs/cursor2_hover.png'), auto; */
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 0.3px;
@@ -136,10 +140,15 @@ header {
 
 .item:hover .content {
   display: block;
+  opacity: 1;
+}
+
+.item:hover .content img {
+  opacity: 1;
+  transform: scale(1); 
 }
 
 /* ---------------------- CURSOR ---------------------- */
-/*
 .cursor-dot {
   position: fixed;
   top: 0;
@@ -149,9 +158,9 @@ header {
   pointer-events: none;
   transition: transform 0.1s ease;
   z-index: 9999;
-  background-image: url('imgs/cursor2.png');  
+  background-image: url('imgs/cross_cursor.png');  
   background-size: cover; 
-}*/
+}
 
 /* ---------------------- FOOTER ---------------------- */
 footer {
@@ -159,6 +168,31 @@ footer {
   padding: 0px;
   margin-top: auto;
   text-align: center;
+}
+
+@keyframes handwriting {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.handwriting-effect {
+  font-family: 'Brush Script', cursive;
+  font-size: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 4px solid black;
+  animation: handwriting 4s steps(40) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
 }
 
 /*
