@@ -3,7 +3,7 @@ const dot = document.querySelector('.cursor-dot');
 let mouseX = 0, mouseY = 0;
 let dotX = 0, dotY = 0;
 let bobbleX = 0, bobbleY = 0;
-let bobbleSpeed = 0.1; // Speed of bobbling effect
+let bobbleSpeed = 0.1; // speed of bobbling effect - keep?
 
 window.addEventListener('mousemove', (e) => {
   mouseX = e.clientX;
@@ -14,9 +14,9 @@ function animate() {
   dotX += (mouseX - dotX) * 0.1; // Smooth cursor movement
   dotY += (mouseY - dotY) * 0.1;
 
-  // Add a random offset to create bobble effect around the cursor
-  bobbleX += (Math.random() - 0.5) * 5; // Random bobble X direction
-  bobbleY += (Math.random() - 0.5) * 5; // Random bobble Y direction
+  // bobble effect around the cursor
+  bobbleX += (Math.random() - 0.5) * 5; 
+  bobbleY += (Math.random() - 0.5) * 5; 
 
   // Update dot position with bobble effect
   dot.style.transform = `translate(${dotX}px, ${dotY}px)`;
@@ -42,16 +42,16 @@ items.forEach(item => {
   });
 
   item.addEventListener('mouseleave', () => {
-    // Delay hiding the content and image
+    // delay hiding the content and image
     timeout = setTimeout(() => {
       const content = item.querySelector('.content');
       const img = item.querySelector('.content img');
       
       content.style.opacity = '0';
-      img.style.opacity = '0'; // Hide image after delay
+      img.style.opacity = '0'; // hide img after delay
       content.style.transition = 'opacity 0.5s ease';
       img.style.transition = 'opacity 0.5s ease';
-    }, 1000); // Adjust delay in milliseconds (1 second here)
+    }, 1000); 
   });
 });
 /*

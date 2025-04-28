@@ -82,7 +82,7 @@ header {
   display: none;
   position: absolute;
   z-index: 9999;
-  top: 100%; /* Position below the index */
+  top: 100%; 
   left: 20px;
   width: 20vw; 
 }
@@ -193,7 +193,7 @@ footer {
   overflow: hidden;
   display: inline-block;
   border-right: 3px solid black;
-  animation: handwriting 1s steps(16) 1s forwards, blink-caret 0.75s step-end infinite; /* break into 16 steps */
+  animation: handwriting 1s steps(16) 1s forwards, blink-caret 0.75s step-end infinite; 
   animation-fill-mode: forwards;
 }
 /*
