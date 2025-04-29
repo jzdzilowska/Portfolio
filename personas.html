@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://use.typekit.net/pog7ryn.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personas and Storyboarding</title>
     <link rel="stylesheet" href="styles_personas.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pog7ryn.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vea8mpz.css">
     <script>
         function showPopup(question, answer) {
             const popup = document.createElement('div');
@@ -13,22 +14,47 @@
             popup.innerHTML = `<h4>${question}</h4><p>${answer}</p><button onclick='closePopup(this)'>Close</button>`;
             document.body.appendChild(popup);
         }
-
         function closePopup(button) {
             document.body.removeChild(button.parentElement);
         }
+
+        // Cursor animation !!!
+        const dot = document.querySelector('.cursor-dot');
+        let mouseX = 0, mouseY = 0;
+        let dotX = 0, dotY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        });
+
+        function animate() {
+        dotX += (mouseX - dotX) * 0.1; // Smooth cursor movement
+        dotY += (mouseY - dotY) * 0.1;
+
+        // Update dot position with bobble effect
+        dot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+
+        requestAnimationFrame(animate);
+        }
+
+        animate();
     </script>
 </head>
 <body>
     <header>
-        <h1>PERSONAS</h1>
-        <h3><u>A case study on the Mail Room Kiosk.</u> Investigates a public interface by capturing users' diverse experiences & needs through interviews & observations, creating personas to assess how well the interface meets those needs.</h3>
+        <img src="imgs/personas_imgs/star_header.png" style="width: 8%; margin-top: 70px; left: 20vw;">
+        <img src="imgs/personas_imgs/star_header.png" style="width: 4%; margin-top: 130px; left: 16.5vw; rotate: 40deg;">
+        <img src="imgs/personas_imgs/star_header.png" style="width: 8%; margin-top: 70px; right: 20vw; rotate: 120deg;">
+        <img src="imgs/personas_imgs/star_header.png" style="width: 4%; margin-top: 60px; right: 18vw; rotate: 81deg;">
+        <div class="title">Personas</div>
+        <p>A case study on the Mail Room Kiosk. Investigates a public interface by capturing users' diverse experiences & needs through interviews & observations, creating personas to assess how well the interface meets those needs.</p>
     </header>
     <div class="container">
         <section class="section">
             <div class="questions">
                 <ul>
-                    <h2>   ...Questions asked...</h2>
+                    <div class="sec_title">...Questions asked...</div>
                     <div class="cloud-textbox" onclick="showPopup('What year are you in?', 'The question helps identify patterns between user experience and familiarity with the system. Usual responses showed that freshmen often reported more confusion with the card reader and login process, while upperclassmen were more efficient but still frustrated by technical glitches. This distinction helps evaluate whether the interface’s issues stem from poor design or lack of user familiarity - in this case, partially both.')">
                         What year are you in? 
                     </div>
@@ -54,14 +80,13 @@
                         What do you like about the kiosk?
                     </div>
                 </ul>
-            <div class="sketch">
-                <img src="imgs/personas_imgs/interface.png" alt="Sketch of Self-Checkout Station">
-            </div>
+                <div class="sketch">
+                    <img src="imgs/personas_imgs/interface.png" alt="Sketch of Self-Checkout Station">
+                </div>
         </div>
-
         </section>
         <section class="section">
-            <h2>...OBSERVATIONS...</h2>
+            <div class="sec_title">...Observations...</div>
             <h3>Retrieved by observing 5+ students at Brown University using the Mail Room Kiosk to craft personas for interface evaluation.</h3>
             <div class="notes-container">
                 <div class="post-it">Many users struggled with the card reader, often having to swipe their Brown ID multiple times before it was properly recognized.</div>
@@ -73,7 +98,7 @@
         </section>
 
         <section class="section">
-            <h2>...PERSONAS...</h2>
+            <div class="sec_title">...Personas...</div>
             <h3>Crafted based on interviews and observations to provide realistic representations of different user types, <br> allowing for more user-centered design decisions and a better understanding of their needs, behaviors, and <br>pain points.</h3>
             <div class="personas">
                 <div class="persona">
@@ -92,12 +117,14 @@
         </section>
 
         <section class="section">
-            <h2>...Efficient Jamie's Storyboard...</h2>
+            <div class="sec_title">...Efficient Jamie's Storyboard...</div>
             <h3>Visually maps out the interaction with the kiosk of a well-acquainted with the system user, helping to<br>illustrate their experience, emotions, and difficulties faced step by step to identify areas for improvement.</h3>
             <img src="imgs/personas_imgs/storyboard.png" alt="Efficient Jamie's Storyboard, showing her process of using the kiosk.">
         </section>
     </div>
+    <div class="cursor-dot"></div>
     <footer>
         <p>Created with love by <a href="https://github.com/jzdzilowska">@jzdzilowska</a></p>
+    </footer>
 </body>
 </html>

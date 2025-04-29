@@ -12,83 +12,98 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Custom';  
+  src: url('fonts/Crozet-Regular.woff') format('woff');  
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  width: 100vw; 
-  font-family: 'Manifont Grotesk', sans-serif;
-  font-weight: 300;
+  width: 100%;
+  font-family: 'lores-12', sans-serif;
+  font-size: 13px;
   margin: 0px;
   padding: 0;
-  background-color: #ffffff;
-  color: #141414;
-  margin-block: 0px;
+  background-color: rgb(26, 26, 26);
+  color: #f5f5f5;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: url('imgs/personas_imgs/cursor.png'), auto;
 }
 
 ::selection {
-  color: rgb(255, 255, 255);
-  background: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 20px; 
+  width: 70%;
+  top: 0;
 }
 
+/* ----------------------------- HEADER ----------------------------- */
 header {
   width: 100%;
-  font-weight: 500;
-  font-size: 60px;
-  font-style: italic;
   text-align: center;
-  border-bottom: #1c1c1c 3px dotted;
   display: flex; 
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 10px; 
 }
 
-header h3 {
-  width: 50%;
-  font-size:17px;
+.title { 
+  text-align: justify;
+  font-family: 'Custom'; 
+  font-size: 130px; 
+  margin-bottom: -50px; 
+}
+
+header p {
+  width: 42%; 
+  margin-bottom: 30px; 
+  font-size:14px;
   text-align: justify;
   text-align-last: center;
-
-}
-h1 {
-  margin-top:30px;
-  margin-bottom: -5px;
 }
 
+header img {
+  position: absolute;
+  height: auto;
+  opacity: 0.85;
+}
+
+/* ----------------------------- CONTENT ----------------------------- */
 h2 {
   width: 100%;
-  margin-bottom: 0px;
+  margin: 0px;
+  padding: 0px; 
 }
 
 h3 {
   margin: 0px; 
   margin-bottom: 20px;
   font-size: 25px;
+  padding: 0px; 
 }
 
 h4 {
+  margin: 0px;
+  padding: 0px; 
   font-size: 25px;
-  margin-block: 0;
 }
+
+.sec_title {
+  font-family: 'Custom'; 
+  font-size: 45px;
+  text-align: center;
+}
+/* ----------------------------- SECTIONS ----------------------------- */
 
 .section {
   margin-bottom: 60px;
   text-align: center;
-}
-
-.section h2 {
-  font-weight: 500;
-  font-size: 45px;
-  margin-top:20px;
-  margin-bottom:20px;
-  font-style: italic;
 }
 
 .section img {
@@ -98,33 +113,40 @@ h4 {
 }
 
 .section h3{
-  font-size: 17px;
+  font-size: 15px;
   text-align: justify;
   text-align-last: center;
+  padding: 0px; 
 }
 /* ----------------------------- PART 1 ----------------------------- */
 
 .questions {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
   gap: 50px;
   height: 500px;
   margin-top: 30px;
+  text-align: center;
 }
 
 .questions ul {
-  width: 80%; margin: 0 auto; padding: 0; text-align: center;
+  width: 80%; margin: 0 auto; padding: 0; text-align: center; justify-items: center;
+}
+
+ul .sec_title {
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
 }
 
 .cloud-textbox {
   display: block;
-  padding: 10px;
+  padding: 9.5px;
   margin: 5px 0;
   border: 2px dotted #000;
   background-color: #fff;
-  font-size: 18px;
+  font-size: 14px;
   color: #000;
   transition: transform 0.2s ease-in-out;
   text-align: center;
@@ -184,9 +206,9 @@ h4 {
 }
 
 .post-it:nth-child(1) { background-color: #240115; --rotation: -3deg; --index: 1; color: white}
-.post-it:nth-child(2) { background-color: #F3DAD8; --rotation: 2deg; --index: 2; }
-.post-it:nth-child(3) { background-color: #DE3C4B; --rotation: -2deg; --index: 3; }
-.post-it:nth-child(4) { background-color: #87F5FB; --rotation: 1deg; --index: 4; }
+.post-it:nth-child(2) { background-color: #F3DAD8; --rotation: 2deg; --index: 2; color: black}
+.post-it:nth-child(3) { background-color: #DE3C4B; --rotation: -2deg; --index: 3; color: black}
+.post-it:nth-child(4) { background-color: #87F5FB; --rotation: 1deg; --index: 4; color: black}
 .post-it:nth-child(5) { background-color: #2F131E; --rotation: -1deg; --index: 5; color:white}
 
 .post-it:hover {
@@ -213,8 +235,13 @@ h4 {
   text-align: justify;
   text-align-last: center;
   opacity: 90%;
+  color: black;
 }
 
+.popup::selection {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}
 
 .popup button {
   font-family: 'Abordage', sans-serif;
@@ -290,4 +317,18 @@ footer a {
 footer a:hover {
   background: white;
   color: black;
+}
+
+/* ----------------------------- SEC CURSOR ----------------------------- */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px; 
+  height: 20px;
+  pointer-events: none;
+  transition: transform 0.1s ease;
+  z-index: 9999;
+  cursor: url('imgs/personas_imgs/cursor.png'), auto;
+  background-size: cover; 
 }
