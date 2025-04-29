@@ -16,6 +16,11 @@ body {
   align-items: center;
   background-color: #ffffff;
   text-align: center;
+  cursor: url('imgs/politechnika_imgs/cursor_o.png'), auto;
+}
+
+a:hover {
+  cursor: url('imgs/politechnika_imgs/cursor_c.png'), auto;
 }
 
 section {
@@ -32,6 +37,7 @@ section.visible {
 /* ----------------------- Header ----------------------- */
 
 .header {
+  width: 80%; 
   height: auto;
   margin: 0;
   margin-top: 50px;
@@ -53,7 +59,6 @@ section.visible {
   padding: 0;
   margin: 0; 
 }
-
 
 /* ----------------------- Navbar ----------------------- */
 .navbar {
@@ -83,8 +88,13 @@ section.visible {
   text-decoration: none;
   color: black; 
   font-size: 20px; 
+  transition: all 0.1s;
 }
 
+.navbar a:hover {
+  color: #000; 
+  letter-spacing: 0.5px;
+}
 /* ----------------------- Main ----------------------- */
 
 main {
@@ -243,23 +253,26 @@ td:first-child {
 }
 
 footer {
+  font-family: "Hikarumono", sans-serif;
+  font-size: 14px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   color: rgb(0, 0, 0);
   width: 100%;
   height: 50px;
   margin-top: 30px;
-  border-top: 0.2px solid #000;
+  border-top: 0.8px dashed #000;
 }
 
 footer a {
-  background-color: black;
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 2px;
+  width: auto; 
+  padding: 0; 
 }
 
 /* ----------------------- pixels ----------------------- */
