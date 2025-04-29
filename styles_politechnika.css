@@ -34,6 +34,25 @@ section.visible {
   transform: translateY(0);
 }
 
+.back {
+  position: fixed;
+  z-index: 10000;
+  bottom: 30px;
+  left: 30px;
+  font-size: 20px;
+  font-family: "lores-15-narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.back a{
+  text-decoration: none;
+  color: black; 
+}
+
+.back:hover{
+  transform: rotate(-10deg);
+}
 /* ----------------------- Header ----------------------- */
 
 .header {
@@ -87,7 +106,7 @@ section.visible {
 .navbar ul a {
   text-decoration: none;
   color: black; 
-  font-size: 20px; 
+  font-size: 18px; 
   transition: all 0.1s;
 }
 
@@ -253,7 +272,6 @@ td:first-child {
 }
 
 footer {
-  font-family: "Hikarumono", sans-serif;
   font-size: 14px;
   display: flex;
   flex-direction: row;
@@ -265,6 +283,10 @@ footer {
   height: 50px;
   margin-top: 30px;
   border-top: 0.8px dashed #000;
+  font-family: "lores-15-narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 10000;
 }
 
 footer a {
