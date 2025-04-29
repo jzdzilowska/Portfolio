@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Redesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Nanum+Myeongjo&family=Playfair+Display&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="styles_politechnika.css">
+</head>
+<body>
+  <nav class = "navbar">
+    <ul>
+        <li><a href="#input">Overview</a></li>
+        <li><a href="#problems">Problems</a></li>
+        <li><a href="#visuals">Visual Redesign</a></li>
+        <li><a href="#redesign">Responsive Redesign</a></li>
+    </ul>
+  </nav> 
+  <div class="header"><p>Responsive Redesign:</p>Politechnika Krakowska</div>
+  <main>
+    <section id="info">
+      <div class="sec_title">1. Overview</div>
+      <div class="info">Responsive design ensures optimal viewing across all devices. <a href="https://www.pk.edu.pl/index.php?lang=pl">Politechnika Krakowska's</a> website, despite recent updates, still doesn't support the aforementioned, resulting in a frustrating user experience. As a former applicant to their architecture program, I experienced the related issues firsthand, with the website being entirely "cropped" on mobile, and zooming in obstructing crucial components. My redesign focuses on transforming the site into an intuitive, visually engaging platform worthy of a leading engineering university.</p>
+    </section>
+    <section id="problems">
+      <div class="sec_title">2. Problems Identified</div>
+      <p>The Politechnika Krakowska website serves as a critical hub for prospective students, researchers, and staff, yet its current design fails to meet modern usability and accessibility standards. It lacks intuitive navigation and visual cohesion, creating unnecessary friction for users. Screenshots below depict the site at different screen sizes, with the following table highlighting key issues.</p>
+      <div class="problemsimgs">
+        <div><img src="imgs/politechnika_imgs/desktop.png" alt="Desktop Display (3024 x 1964px)"><p>Desktop (3024 x 1964px)</p></div>
+        <div><img src="imgs/politechnika_imgs/tablet.png" alt="Tablet Display (768 x 1024px)"><p>Tablet (768 x 1024px)</p></div>
+        <div><img src="imgs/politechnika_imgs/phone.png" alt="Mobile Display (375 x 667px)"><p>Mobile (375 x 667px)</p></div>
+      </div>
+          <table>
+            <thead>
+                <tr>
+                    <th>Key Issues Identified</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Navigation & Efficiency</td>
+                    <td>
+                        <ul>
+                            <li><u>Overwhelming Dropdown Menus:</u> The submenus are cluttered with unrelated items, increasing cognitive load.</li>
+                            <li><u>Redundant Elements:</u> Numerous navbars (all 4 of them) and the unnecessary, poorly-labeled accessibility toolbar located on the bottom of the site add confusion.</li>
+                            <li><u>Poor Visibility of Critical Features:</u> Interactive elements in the header blend into static logos. </li>
+                            <li><u>Poor Navbar Positioning:</u> Users must scroll up to access the primary menu.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Learnability</td>
+                    <td>
+                        <ul>
+                            <li><u>Inconsistent Design Language and Unclear User Journey:</u> Disjointed color schemes and buttons lacking clear visual priorit make all actions seemingly equally important for first-time users.</li>
+                            <li><u>Overloaded Homepage:</u> Too much text and visuals bury key actions.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Memorability</td>
+                    <td>
+                        <ul>
+                            <li><u>Non-Intuitive Navigation:</u> Users are requited to click through multiple pages to find relevant information, with the sheer amount of options available within each navbar either overlapping between the menus (more than 10 links in the head "kandydaci/studenci..." navbar mirror those in the "uczelnia/nauka..." menu), or not relating to each other within the same one. For efficiency, several links could be consolidated, and the entire "na skróty" menu could be removed. ></ty></li>
+                            <li><u>Generic Aesthetic:</u> The text-heavy design fails to leave an impression.</li>
+                            <li><u>Poor Spatial Awareness:</u> Users struggle to retrace steps with the amount of inconsistent visual cues.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Accessibility</td>
+                    <td>
+                        <ul>
+                            <li><u>Low Contrast Ratios:</u> Most text fails WCAG standards. Most text shares similar shades of blue, blending into the background.</li>
+                            <li><u>Illegible Text:</u> Small font sizes and poor line spacing make reading difficult.</li>
+                            <li><u>Non-Descriptive Links:</u> Links lack context and are't descriptive.</li>
+                            <li><u>Unlabeled Interactive Elements:</u> Icons lack alt text and/or labels.</li>
+                            <li><u>Unlabeled Images:</u> Nearly all images lack alt text (or are otherwise not descriptive).</li>
+                            <li><u>Non-Responsive Components:</u> Critical content is cut off on narrow screens and viewports different than desktop.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </section>
+    <section id="visuals">
+      <div class="sec_title">3. Visual Redesign</div>
+      <p>My redesign enhances the site's visual appeal and usability, featuring a clean, modern aesthetic with intuitive navigation and improved accessibility.<br><br>
+      First, before addressing all the issues mentioned in the <a href="#problems">problems section</a> through code and ensuring responsiveness across all screen sizes, I combined a cohesive visual identity brief reflecting the university's architectural focus. This included modernized logos, custom typography, and a color palette rooted in Politechnika's heritage.</p>
+      <img src="imgs/politechnika_imgs/visuals.png" alt="Visual Redesign">
+      <p><br><br>Second, I restructured the site's layout through mockups in Figma, incorporating this aesthetic. The redesign features a simplified, user-friendly navigation system with clear CTAs and intuitive information architecture. View the full Figma project <a href="https://www.figma.com/design/CpLgXB7r4Q8IDxfhJ1K574/Politechnika-Krakowska?node-id=0-1&t=5Qkv2zLb520IxafI-1">here</a>.<br></p>
+      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="500" src="https://embed.figma.com/design/CpLgXB7r4Q8IDxfhJ1K574/Politechnika-Krakowska?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+    </section>
+    <section id="redesign">
+      <div class="sec_title">4. Responsive Redesign</div>
+      <p>The final deployment of Politechnika's redesigned website can be found <a href="https://jzdzilowska.github.io/politechnika-redesign/">here</a>. The screenshots below display the redesigned website on computer, tablet, and mobile screens, while the table describes the changes made to address the issues identified in the <a href="#problems">problems section</a>.</p>
+      <div class="problemsimgs">
+        <div><img src="imgs/politechnika_imgs/desktop2.png" alt="Desktop Display (3024 x 1964px)"><p>Desktop (1920 x 1080px)</p></div>
+        <div><img src="imgs/politechnika_imgs/tablet2.png" alt="Tablet Display (768 x 1024px)"><p>Tablet (768 x 1024px)</p></div>
+        <div><img src="imgs/politechnika_imgs/phone2.png" alt="Mobile Display (375 x 667px)"><p>Mobile (375 x 667px)</p></div>
+      </div>
+      <div class="sec_title">Issues Addressed & Implemented Solutions</div>
+      <p><u>Overwhelming Navigation:</u> Consolidated 4 navbars into 2 primary menus (a general directory and an expandable departments section) and removed redundant links. Implemented expandable hamburger menu for mobile, ensured responsiveness across all screen sizes (no content cropping of menu items), and simplified navigation access with the primary menu consistently sticked the top of the page.<br><br>
+      <u>Poor Responsiveness:</u> Implemented fluid grids ('Explore', 'Recents' sections) and flexible images ('Recents' section), added media queries for breakpoint on mobile, and redesigned components to stack vertically on small screens (the grid within the 'Recents' section changes its shape into a 2x2). All elements adjust to the viewport size: images (within the hero, explore, and recents sections) scale down, and font size decreases gradually rather than jumping at breakpoins.<br><br>
+      <u>Accessibility issues:</u> Increased contrast ratios to meet WCAG AA standards, added descriptive alt text for all images, provided comprehensive titles for all links, implemented proper heading hierarchy, and ensured keyboard navigability.<br><br>
+      <u>Visual clutter:</u> Established consistent color palette and typography, increased white space for decreased cognitive load, and prioritized appropriate content by establishing clear visual hierarchy.<br><br>
+        <u>Poor Learnability:</u> Simplified the homepage to focus on key actions, added hover effects to interactive elements (switch to an italic font style within the navbar, change of background color in the dropdown 'Departments' menu, 'Recents' section, and all buttons to black, scale-up within the 'Explore' grid), and ensured consistent design language throughout the site.<br>
+    </section>
+  </main>
+  <footer>
+    <p>Made with love by <a href="https://github.com/jzdzilowska">@jzdzilowska</a></p>
+  </footer>
+  <div id="pixel-container"></div>
+<script>
+  // 8bit
+  const container = document.getElementById('pixel-container');
+  
+  function createPixel() {
+    const pixel = document.createElement('div');
+    pixel.classList.add('pixel');
+    pixel.style.bottom = Math.random() * 100 + 'vh';
+    pixel.style.left = Math.random() * 100 + 'vw';
+    pixel.style.animationDuration = 3 + Math.random() * 2 + 's';
+    container.appendChild(pixel);
+  
+    setTimeout(() => pixel.remove(), 5000);
+  }
+  
+  setInterval(createPixel, 10);
+  
+  // scroll 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+  
+  document.querySelectorAll('main section').forEach(section => {
+    observer.observe(section);
+  });
+  </script>
+  </body>
+</body>
+</html>
