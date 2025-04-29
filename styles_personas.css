@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Manifont Grotesk';
-  src: url('assets/fonts/manifont/ManifontGroteskBook-webfont.otf') format('opentype');
+  src: url('fonts/manifont/ManifontGroteskBook-webfont.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Abordage'; 
-  src: url('assets/fonts/abordage/Abordage-Regular.otf') format('opentype');
+  src: url('fonts/abordage/Abordage-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
