@@ -19,7 +19,7 @@ body {
   font-family: "akhbar", sans-serif;
   font-weight: 400;
   font-style: normal;
-  cursor: url('./imgs/cross_cursor.png'), auto; 
+  cursor: url('./imgs/portfolio_imgs/cross_cursor.png'), auto; 
 }
 
 ::selection {
@@ -37,7 +37,7 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 0.3px;
-  /* cursor: url('./imgs/cross_cur.png'), auto; */
+  /* cursor: url('./imgs/portfolio_imgs/cross_cur.png'), auto; */
 }
 
 /* ---------------------- HEADER ---------------------- */
@@ -133,7 +133,7 @@ header {
 }
 
 .item:hover {
-  /* cursor: url('./imgs/cursor2_hover.png'), auto; */
+  /* cursor: url('./imgs/portfolio_imgs/cursor2_hover.png'), auto; */
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 0.3px;
@@ -158,7 +158,7 @@ header {
   pointer-events: none;
   transition: transform 0.1s ease;
   z-index: 9999;
-  background-image: url('imgs/cross_cursor.png');  
+  background-image: url('imgs/portfolio_imgs/cross_cursor.png');  
   background-size: cover; 
 }
 
