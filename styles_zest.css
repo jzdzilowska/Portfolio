@@ -1,0 +1,450 @@
+@font-face {
+  font-family: 'Manifont Grotesk';
+  src: url('fonts//manifont/ManifontGroteskBook-webfont.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Abordage'; 
+  src: url('fonts//abordage/Abordage-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Boris'; 
+  src: url('fonts/Boris.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 100%; 
+  font-family: 'Manifont Grotesk', sans-serif;
+  font-weight: 300;
+  margin: 0px;
+  padding: 0;
+  background-color: #FAFAF9;
+  color: #141414;
+  margin-block: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;  
+}
+
+::selection {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}
+
+.container {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 40px; 
+  background-color: white;
+  padding-top: 40px;
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
+  padding-left:40px;
+  padding-right: 40px;
+}
+
+/* ----------------------------- HEADER  ----------------------------- */
+header {
+  position: sticky;
+  z-index: 0; 
+  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
+  font-weight: 500;
+  font-size: 40px;
+  font-style: italic;
+  text-align: center;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 90px;
+  margin-left: 50px;
+}
+
+header img {
+  width: 270px; 
+  height: auto; 
+}
+
+.lemon {
+  position: absolute;
+  left: 410px;
+  width: 200px; 
+  height: auto; 
+  margin-top: -30px;
+  animation: shiver-pause 2s infinite ease-in-out;
+}
+
+@keyframes shiver-pause {
+  0%   { transform: rotate(0deg); }
+  5%   { transform: rotate(2deg); }
+  10%  { transform: rotate(-2deg); }
+  15%  { transform: rotate(2deg); }
+  20%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+header p {
+  font-family: 'Boris', sans-serif;
+  font-size: 23px;
+  font-weight: 300;
+  margin-top: 10px;
+  text-align: left;
+  justify-content: flex-start;
+  letter-spacing: 0.14em;
+}
+
+
+/* ----------------------------- GENERAL  ----------------------------- */
+h2 {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+  font-weight: 500;
+  font-size: 45px;
+  margin-top:20px;
+  font-style: italic;  
+  font-family: 'Boris', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  width: 90%;
+  margin: 0px; 
+  margin-bottom: 20px;
+  font-size: 17px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+h4 {
+  font-size: 25px;
+  margin-block: 0;
+}
+
+a{
+  text-decoration: none;
+  text-decoration: underline;
+  color: inherit; 
+  margin-block: 0;
+  font-style: italic;
+  padding: 2px; 
+  transition: 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 94%;
+  margin-bottom: 40px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.zest-logo {
+  animation: shiver-pause 3s infinite ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  height: auto;
+  margin-top: 25px;
+}
+/* ----------------------------- PART 1 ----------------------------- */
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0; 
+  padding: 0;
+}
+
+.questions ul {
+  width: 80%; margin: 0 auto; padding: 0; text-align: center;
+}
+
+.cloud-textbox {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 18px;
+  color: #000;
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  width: 85%;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.055);
+}
+
+.cloud-textbox:hover {
+  cursor: help;
+  animation: shiver 0.5s infinite ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes shiver {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-2deg); }
+}
+
+.sketch img, .storyboard img {
+  margin-top: 10px; 
+  height: 500px;
+  width: auto;
+}
+
+/* ----------------------------- PART 2 ----------------------------- */
+
+.notes-container {
+  display: flex;
+  gap: -20px;
+  position: relative;
+  justify-content: center;
+}
+
+.post-it {
+  width: 180px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform: rotate(var(--rotation));
+  z-index: var(--index);
+  margin-left: -10px;
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  transition: margin 0.5s ease-in-out; /* Smooth transition over 0.5s */
+}
+
+.post-it p {
+  font-family: 'Abordage', sans-serif;
+  font-weight: 100;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.post-it:nth-child(1) { background-color: #caff6e; --rotation: -3deg; --index: 1; color: rgb(0, 0, 0)}
+.post-it:nth-child(2) { background-color: #fffd91; --rotation: 2deg; --index: 2; }
+.post-it:nth-child(3) { background-color: #F4F4F5; --rotation: -2deg; --index: 3; }
+.post-it:nth-child(4) { background-color: #FFD335; --rotation: 1deg; --index: 4; }
+
+.post-it:hover {
+  animation: shiver 1s infinite ease-in-out;
+  z-index: 1000;
+  margin-right: 10px; /* Or whatever larger margin you want */
+  margin-left:10px;
+}
+
+/* ----------------------------- PART 3 ----------------------------- */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid black;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  text-align-last: center;
+  opacity: 90%;
+}
+
+
+.popup button {
+  font-family: 'Abordage', sans-serif;
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-width: 0px; 
+}
+
+/* ----------------------------- PART 4 ----------------------------- */ 
+.personas {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.personas img {
+  width: auto;
+  height: 400px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.persona {
+  width: 375px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.persona img[alt="Empathy Map for Anxious Amber - the unsure freshman"] { 
+  transform: rotate(-3deg); 
+}
+.persona img[alt="Empathy Map for Joyful Jamie - the confident senior"] { 
+  transform: rotate(3deg); 
+  margin-top:32px;
+}
+
+.persona img[alt="Empathy Map for Anxious Amber - the unsure freshman"]:hover {
+  animation: shiver 0.7s infinite ease-in-out;
+}
+
+.persona img[alt="Empathy Map for Joyful Jamie - the confident senior"]:hover {
+  animation: shiver2 0.7s infinite ease-in-out;
+}
+
+@keyframes shiver {
+  0%, 100% { transform: rotate(-3deg); }
+  25% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
+}
+
+@keyframes shiver2 {
+  0%, 100% { transform: rotate(3deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(-1deg); }
+  75% { transform: rotate(1deg); }
+}
+
+footer a {
+  background:black; 
+  color: white;
+  font-style:italic; 
+  text-decoration: none;
+  padding: 3px;
+}
+
+footer a:hover {
+  background: white;
+  color: black;
+}
+.part4-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap; 
+}
+
+.part4-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto; 
+}
+
+.part4-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.custom-link {
+  font-size: 20px;
+}
+
+.final {
+  width: 80%;
+  margin-bottom: 40px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.final h3{
+  font-size: 17px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.dot-cursor {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: black; /* Or match your theme */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.lemon2 {
+  z-index: 9999;
+  z-index: 2;
+  position: absolute;
+  width: 100px; 
+  height: auto; 
+  left: 0; 
+  margin-top: 440px;
+  animation: shiver-pause 2s infinite ease-in-out;
+}
+
+.lemon3 {
+  z-index: 9999;
+  position: absolute;
+  width: 100px; 
+  height: auto; 
+  right: 0; 
+  margin-top: -150px;
+  animation: shiver-pause 2s infinite ease-in-out;
+}
+
+.balsamiq {
+  width: 90%;
+  height: auto;
+}
+
+.walkthrough {
+  margin-top:50px; 
+}
