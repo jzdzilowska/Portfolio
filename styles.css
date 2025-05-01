@@ -103,7 +103,7 @@ header {
   height: 100%;
 }
 
-.item {
+.item, .resume {
   position: fixed;
 }
 
@@ -203,6 +203,9 @@ font-style: normal;
 
 /* ---------------------- RESPONSIVE BREAKPOINTS ---------------------- */
 @media (max-width: 768px) {
+  header {
+    position: relative;
+  }
   .index {
     position: static;
     display: flex;
@@ -225,11 +228,11 @@ font-style: normal;
     background-color: transparent;
     box-shadow: none;
     width: 100vw;
-    margin-top: 0px;
+    margin-top: -20px;
     padding: 0;
     opacity: 1;
     visibility: visible;
-    z-index: 9999;
+    z-index: 10;
     text-decoration: none;
   }
 
@@ -271,7 +274,7 @@ font-style: normal;
     flex-direction: column;
     align-items: center;
   }
-
+  
   .items {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -280,6 +283,8 @@ font-style: normal;
     width: 100%;
     height: auto;
     overflow-y: auto;
+    background-color: rgb(240, 240, 240);
+    z-index: 10000;
   }
 
   .item {
@@ -300,7 +305,6 @@ font-style: normal;
 
   .item .title {
     display: block !important;
-    margin-bottom: 10px;
     font-weight: bold;
     text-decoration: none !important;
   }
@@ -346,6 +350,14 @@ font-style: normal;
 
   .item .content p {
     display: block !important;
+    margin: 0px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   header {
@@ -354,6 +366,10 @@ font-style: normal;
 
   footer {
     margin-top: 40px;
+  }
+
+  .resume {
+    display: none;
   }
 }
 @media (max-width: 480px) {
