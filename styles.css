@@ -132,7 +132,7 @@ header {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.item:hover {
+.item:hover, .resume:hover {
   /* cursor: url('./imgs/portfolio_imgs/cursor2_hover.png'), auto; */
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -144,10 +144,18 @@ header {
   opacity: 1;
 }
 
+.resume:hover .content {
+  display: block;
+  opacity: 1;
+}
+
 .item:hover .content img {
   opacity: 1;
 }
 
+.resume:hover .content img {
+  opacity: 1;
+}
 /* ---------------------- CURSOR ---------------------- */
 .cursor-dot {
   position: fixed;
