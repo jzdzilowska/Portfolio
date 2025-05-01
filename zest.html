@@ -25,6 +25,9 @@
         <img class="lemon" src="imgs/iterative_imgs/lemon.png" alt="lemon logo"/>
         <p>Onboarding UI Redesign</p>
     </header>
+    <div class="squiggle-container">
+        <div class="squiggle"></div>
+    </div>
     <div class="container">
         <section class="section">
             <h2>PROJECT INTRODUCTION</h2>
@@ -223,6 +226,19 @@
             header.style.top = '0px';
         }
         });
+
+    // squiggles
+    const numSquiggles = 30;
+    const squiggleContainer = document.querySelector('.squiggle-container');
+    for (let i = 0; i < numSquiggles; i++) {
+        const squiggle = document.createElement('div');
+        squiggle.classList.add('squiggle');
+        squiggle.style.left = Math.random() * 100 + 'vw';
+        squiggle.style.animationDuration = (8 + Math.random() * 4) + 's';
+        squiggle.style.animationDelay = (Math.random() * 5) + 's';
+    
+        squiggleContainer.appendChild(squiggle);
+    }
     </script>
 </body>
 </html>
