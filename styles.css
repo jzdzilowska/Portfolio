@@ -200,3 +200,132 @@ font-family: "shabby-chic", sans-serif;
 font-weight: 400;
 font-style: normal;
 */
+
+/* ---------------------- RESPONSIVE BREAKPOINTS ---------------------- */
+@media (max-width: 768px) {
+  .index {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .index .title {
+    display: none;
+  }
+
+  .index .dropdown-content {
+    position: static;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: transparent;
+    box-shadow: none;
+    width: 100vw;
+    margin-top: 0px;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999;
+    text-decoration: none;
+  }
+
+  .index:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .index .dropdown-content:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .dropdown-content a {
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+  }
+
+  .index .dropdown-content a:hover {
+    text-decoration: none;
+  }
+
+
+  .handwriting-effect {
+    font-size: 60px;
+  }
+
+  .occupation {
+    position: fixed;
+    right: 20px; 
+    top: 0px; 
+    font-size: 70%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    position: static;
+    margin: 20px 0;
+  }
+
+  .content {
+    position: relative; 
+    top: auto;
+    left: auto;
+    transform: none;
+    opacity: 1; 
+    pointer-events:auto;
+    background: transparent; 
+    box-shadow: none; 
+    width: 90%;
+    margin: 10px auto 0;
+  }
+
+  .content img {
+    margin: 0px;
+    padding: 0px; 
+    position: absolute;
+    opacity: 1;
+    width: 20%;
+    height: auto;
+  }
+
+  .item:hover .content {
+    opacity: 1; 
+  } 
+  
+}
+@media (max-width: 480px) {
+  .handwriting-effect {
+    font-size: 40px;
+    letter-spacing: -2px;
+  }
+
+  .index, .occupation {
+    font-size: 14px;
+  }
+
+  .index .dropdown-content {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .content {
+    width: 95%;
+  }
+
+  .cursor-dot {
+    width: 15px;
+    height: 15px;
+  }
+}
