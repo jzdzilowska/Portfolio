@@ -259,7 +259,6 @@ font-style: normal;
     text-decoration: none;
   }
 
-
   .handwriting-effect {
     font-size: 60px;
   }
@@ -273,37 +272,89 @@ font-style: normal;
     align-items: center;
   }
 
-  .item {
-    position: static;
-    margin: 20px 0;
-  }
-
-  .content {
-    position: relative; 
-    top: auto;
-    left: auto;
-    transform: none;
-    opacity: 1; 
-    pointer-events:auto;
-    background: transparent; 
-    box-shadow: none; 
-    width: 90%;
-    margin: 10px auto 0;
-  }
-
-  .content img {
-    margin: 0px;
-    padding: 0px; 
-    position: absolute;
-    opacity: 1;
-    width: 20%;
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
     height: auto;
+    overflow-y: auto;
   }
 
-  .item:hover .content {
-    opacity: 1; 
-  } 
-  
+  .item {
+    position: relative !important; 
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .item .title {
+    display: block !important;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-decoration: none !important;
+  }
+
+  .item .title:hover {
+    text-decoration: none !important;
+  }
+
+  .item .content:hover {
+    text-decoration: none !important;
+  }
+  .item p:hover {
+    text-decoration: none !important;
+  }
+  .item:hover {
+    text-decoration: none !important;
+  }
+
+  .item .content {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    padding: 0;
+    text-align: center;
+    display: flex !important;
+  }
+
+  .item .content img {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 1 !important;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .item .content p {
+    display: block !important;
+  }
+
+  header {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    margin-top: 40px;
+  }
 }
 @media (max-width: 480px) {
   .handwriting-effect {
@@ -327,5 +378,9 @@ font-style: normal;
   .cursor-dot {
     width: 15px;
     height: 15px;
+  }
+
+  .items {
+    grid-template-columns: 1fr;
   }
 }
